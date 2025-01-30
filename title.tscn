@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=3 uid="uid://bfgi5gqcam1fi"]
+
+[ext_resource type="Script" path="res://assets/title/title.gd" id="1_tfhng"]
+[ext_resource type="Texture2D" uid="uid://ujnq88711xff" path="res://assets/title/Start Button-1.png.png" id="2_nqrda"]
+[ext_resource type="Texture2D" uid="uid://bborvx587ay2n" path="res://assets/title/Title Screen-1.png.png" id="3_mgq6b"]
+
+[node name="Title" type="Node2D"]
+script = ExtResource("1_tfhng")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+z_index = 1
+offset_left = -2.0
+offset_top = -3.0
+offset_right = 3923.0
+offset_bottom = 2122.0
+texture = ExtResource("3_mgq6b")
+expand_mode = 1
+
+[node name="Button" type="Button" parent="."]
+z_index = 2
+offset_left = 2201.0
+offset_top = 1653.0
+offset_right = 2469.0
+offset_bottom = 1725.0
+scale = Vector2(3.52592, 3.60438)
+theme_override_font_sizes/font_size = 20
+text = "->"
+icon = ExtResource("2_nqrda")
+text_overrun_behavior = 4
+autowrap_mode = 2
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
